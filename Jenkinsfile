@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/yourusername/jenkins-demo.git'
+                git branch: 'main', credentialsId: 'github-ssh-key', url: 'git@github.com:yourusername/jenkins-demo.git'
             }
         }
         
